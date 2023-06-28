@@ -75,7 +75,7 @@ const Post: React.FC<PostProps> = (props) => {
 	const getImage = (str: string) => {
 		if (str === null || str === '') return 'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg';
 		else str = str.toString();
-		const arrayMatch=str.match(/(https?:\/\/\S+(?:png|jpe?g|gif))/);
+		const arrayMatch=str.match(/(https?:\/\/\S+(?:png|jpe?g|gif))/g);
 		const _return=arrayMatch?arrayMatch[0]:'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg';
 		return _return;
 	};
@@ -101,10 +101,6 @@ const Post: React.FC<PostProps> = (props) => {
 			</Head>
 			<div className="post-container">
 				<h1>{post.title}</h1>
-				<img
-					src={getImage(post.content)}
-					alt={post.title}
-				/>
 				<article dangerouslySetInnerHTML={{ __html: post.content }} />
 			</div>
 		</>
