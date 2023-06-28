@@ -84,7 +84,7 @@ const Post: React.FC<PostProps> = (props) => {
 		<>
 			
 			<div className="post-container">
-				<h1>{post.title}</h1>
+				<h1>Hello world</h1>
 			</div>
 		</>
 	);
