@@ -101,7 +101,6 @@ const Post: React.FC<PostProps> = (props) => {
 			</Head>
 			<div className="post-container">
 				<h1>{post.title}</h1>
-				<article dangerouslySetInnerHTML={{ __html: post.content }} />
 			</div>
 		</>
 	);
