@@ -82,23 +82,7 @@ const Post: React.FC<PostProps> = (props) => {
 
 	return (
 		<>
-			<Head>
-				<meta property="og:title" content={post.title} />
-				<link rel="canonical" href={`https://${host}/${path}`} />
-				<meta property="og:description" content={post.title} />
-				<meta property="og:url" content={`https://${host}/${path}`} />
-				<meta property="og:type" content="article" />
-				<meta property="og:locale" content="en_US" />
-				<meta property="og:site_name" content={host.split('.')[0]} />
-				<meta property="article:published_time" content={post.dateGmt} />
-				<meta property="article:modified_time" content={post.modifiedGmt} />
-				<meta property="og:image" content="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" />
-				<meta
-					property="og:image:alt"
-					content={post.title}
-				/>
-				<title>{post.title}</title>
-			</Head>
+			
 			<div className="post-container">
 				<h1>{post.title}</h1>
 			</div>
